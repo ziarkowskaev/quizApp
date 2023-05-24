@@ -1,0 +1,8 @@
+<% layout("./layouts/layout.eta") %>
+<h1>Login!</h1>
+<p>Haven't yet registered? <a href="/auth/register">Register here!</a></p>
+<form method="POST" class = "bigForm" id= "login" action="/auth/login">
+  <input type="email" placeholder="Email" name="email" /><br/>
+  <input type="password" placeholder="Password" name="password" /><br/>
+  <input type="submit" class="animation" value="Login!" />
+</form>

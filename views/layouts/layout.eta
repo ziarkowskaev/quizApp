@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Your Skills</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+html {
+	font-size: 57%;
+    }
+
+
+body {
+	margin: 0;
+	display: grid;
+	font-size: 1.6rem;
+	place-items: center;
+	background: linear-gradient(#e79796, #ffb284);
+	font-family: Rockwell, "Courier New", Courier, Georgia, Times,
+		"Times New Roman", serif;
+    }
+
+h1 {
+    top: 0;
+    margin: 0;
+    width:320px;
+    padding: 6rem 0;
+    padding-top: 7rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3rem;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+    box-shadow: 0 6px 2rem #f5cec7;
+    background: rgb(231, 151,150, 0.5);
+    }
+
+
+#navul {
+ 
+    flex-direction: row;
+    margin-bottom: 0;
+    }
+
+#navli {
+ 
+    background-color: transparent;
+
+    }
+
+nav{
+
+    background: rgb(255,255,255,0.3);
+    border-radius: 3rem;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    display: grid;
+	place-items: center;    
+}
+
+a{
+    color: #ffffff;
+    text-decoration:none;
+}
+
+.auth{
+    font-size: 2.3rem;
+}
+
+
+ul {
+    margin: 0;
+    gap: 1rem;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    place-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+	}
+
+li {
+    width: 40rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3rem;
+    background: rgb(231, 151,150, 0.5);
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+
+	}
+
+.bigForm {
+    background: rgb(255,255,255,0.3);
+    padding: 3em;
+    height: 80px;
+    border-radius: 20px;
+    border-left: 1px solid rgb(255,255,255,0.3);
+    border-top: 1px solid rgb(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgb(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+  
+}
+
+
+#quiz{
+    height:10px;
+    width :15%;
+    font-size: 2.5rem;
+}
+
+#register{
+    height: 260px;
+}
+
+#login{
+    height: 180px;
+}
+
+#topic{
+    height: 50px;
+}
+.form-control {
+    width: 20px; /* Set the width */
+    height: 20px; /* Set the height */
+}
+
+p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgb(0,0,0,0.3);
+}
+
+#description{
+ width: 50%;
+ text-align: center;
+ 
+}
+
+input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: none;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgb(0,0,0,0.1);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgb(0,0,0,0.1);
+
+    }
+
+::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0,0,0,0.4);
+    }
+
+
+
+</style>
+</head>
+
+
+
+<nav> 
+<ul id="navul">
+<li id="navli">  
+<a href="/">Home</a>  
+</li >  
+<li id="navli">  
+<a href="/topics">Edit topics</a>  
+</li >  
+<li id="navli">  
+<a href="/quiz">Take a quiz</a>  
+</li> 
+</ul> 
+</nav>
+
+
+<%~ it.body %>
+

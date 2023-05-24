@@ -1,0 +1,36 @@
+<% layout("./layouts/layout.eta") %>
+<h1>Topics</h1>
+
+
+<% if (it.validationErrors) { %>
+<ul>
+    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+        <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+            <li><%= err %></li>
+        <% }); %>
+    <% }); %>
+</ul>
+<% } %>
+
+<form class = "bigForm" method="POST" action = "/topics">
+    <p >Add topic as an admin</p>
+    <input type="text" placeholder="Topic" name="name" value="<%= it.name ? it.name : "" %>" />
+    <input type="submit" value="Add Topic!"/>
+</form>
+
+
+<% if (it.topics && it.topics.length > 0) { %>
+<ul>
+<% it.topics.forEach((topic) => { %>
+    <li><a href="/topics/<%= topic.id %>"><%= topic.name %></a>
+     <form method="POST" action="/topics/<%= topic.id %>/delete"></br>
+     <input type="submit" value="Delete topic." />
+     
+    </li>
+<% }); %>
+</ul>
+<%}else { %>
+
+<p> None </p>
+
+<% } %>

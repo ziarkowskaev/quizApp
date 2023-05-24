@@ -1,0 +1,22 @@
+<% layout("./layouts/layout.eta") %>
+<h1>Register!</h1>
+
+<% if (it.validationErrors) { %>
+<ul>
+    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+        <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+            <li><%= err %></li>
+        <% }); %>
+    <% }); %>
+</ul>
+<% } %>
+<p>Already registered? <a href="/auth/login">Login here!</a></p>
+
+<form class = "bigForm" id = "register" method="POST" action="/auth/register">
+  <input type="email" placeholder="Email" name="email" value="<%= it.email ? it.email : "" %>"/><br/>
+  
+  <input type="password" placeholder="Password" name="password" /><br/>
+  
+  <input type="password" placeholder="Repeat password"  name="verification" /><br/>
+  <input type="submit" value="Submit!" />
+</form>

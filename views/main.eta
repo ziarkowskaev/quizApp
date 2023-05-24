@@ -1,0 +1,19 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>QuizLab</h1>
+<a class = "auth" href="/auth/register">Register here!</a>
+<a class = "auth" href="/auth/login">Login here!</a> 
+<p id ="description" class = "bigForm">
+Application designed to empower users with the ability to create and participate in customized quizzes.
+QuizLab allows for creating single select questions.
+Users can exercise their knowledge, challenge their friends, and expand 
+their learning horizons with provided topics.
+</p>
+
+<ul>
+<li>Number of topics <%= it.topics%></li>
+<li>Number of questions <%= it.questions%></li>
+<li>Number of answers <%= it.answers%></li>
+</ul>
+
+

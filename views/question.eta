@@ -1,0 +1,36 @@
+<% layout("./layouts/layout.eta") %>
+<h1><%= it.question.question_text %></h1>
+
+<% if (it.validationErrors) { %>
+<ul>
+    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+        <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+            <li><%= err %></li>
+        <% }); %>
+    <% }); %>
+</ul>
+<% } %>
+<p>Check for correct option</p>
+<form method="POST" class = "bigForm" action = "/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options">
+    <input type="text" placeholder="Answer" name="option_text"/>
+    <input type="checkbox" class="form-control" name="is_correct"/></br>
+    <input type="submit" value="Add"/>
+</form>
+
+<% if (it.answers && it.answers.length > 0) { %>
+
+<ul>
+<% it.answers.forEach((answer) => { %>
+    <li><%= answer.option_text%>
+
+    <form method="POST" action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%= answer.id %>/delete"></br>
+     <input type="submit" value="Delete option" />
+     </li>
+
+<% }); %>
+</ul>
+<%} else { %>
+
+<p> None </p>
+
+<% } %>
