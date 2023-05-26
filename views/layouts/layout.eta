@@ -179,6 +179,29 @@ input {
     }
 
 
+@media only screen and (max-width: 600px) {
+    h1 {
+        width: 100%;
+        padding: 4rem 1rem;
+        margin-bottom: 4rem;
+    }
+
+    ul {
+        margin-bottom: 2rem;
+    }
+
+    li {
+        width: 90%;
+    }
+
+    .bigForm {
+        padding: 2em;
+        height: auto;
+        width: 90%;
+    }
+}
+
+
 
 </style>
 </head>
