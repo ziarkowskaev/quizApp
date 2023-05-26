@@ -5,7 +5,7 @@
 
 <ul>
 <% it.topics.forEach((topic) => { %>
-    <li><a href="/topics/<%= topic.id %>"><%= topic.name %></a></li>
+    <li ><a href="/topics/<%= topic.id %>"><%= topic.name %></a></li>
 <% }); %>
 </ul>
 <%} else { %>

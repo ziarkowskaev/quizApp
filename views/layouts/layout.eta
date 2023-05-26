@@ -35,29 +35,37 @@ h1 {
     background: rgb(231, 151,150, 0.5);
     }
 
-
-#navul {
- 
-    flex-direction: row;
-    margin-bottom: 0;
-    }
-
-#navli {
- 
-    background-color: transparent;
-
-    }
-
 nav{
 
     background: rgb(255,255,255,0.3);
     border-radius: 3rem;
     position: fixed;
     top: 0;
-    width: 80%;
-    display: grid;
-	place-items: center;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1;
 }
+
+#navul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0;
+    }
+
+#navli {
+    margin: 0 1rem;
+    background-color: transparent;
+
+    }
+
 
 a{
     color: #ffffff;
@@ -139,8 +147,9 @@ p {
 }
 
 #description{
- width: 50%;
- text-align: center;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 40px;
  
 }
 

@@ -65,3 +65,15 @@ Deno.test({
 });
 
 
+  Deno.test({
+    name:'After failed login response status is 401', 
+    async fn() {
+    const testClient = await superoak(app);
+    await testClient.post('/auth/login')
+                    .send("email=invalid@example.com&password=wrongpassword")
+                    .expect(401)
+                   
+  },
+  sanitizeResources: false,
+  sanitizeOps: false,
+});
