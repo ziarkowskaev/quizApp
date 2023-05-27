@@ -3,7 +3,7 @@
 
 <% if (it.topics && it.topics.length > 0) { %>
 
-<ul>
+<ul class="topics">
 <% it.topics.forEach((topic) => { %>
     <li ><a href="/topics/<%= topic.id %>"><%= topic.name %></a></li>
 <% }); %>

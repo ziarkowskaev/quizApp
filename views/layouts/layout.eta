@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Your Skills</title>
+    <title>QuizzApp</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
 
@@ -86,10 +86,12 @@ ul {
     place-items: center;
     flex-direction: column;
     margin-bottom: 5rem;
+    
 
 	}
 
 li {
+    font-weight: 600;
     width: 40rem;
     text-align: center;
     color: #ffffff;
@@ -139,7 +141,7 @@ li {
 p {
     font-weight: 500;
     color: #fff;
-    opacity: 0.7;
+    opacity: 0.9;
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 20px;
