@@ -13,7 +13,6 @@ const listAnswersUser = async () => {
 };
 
 
-
 ///find question specific to the topic
 const listAnswers = async (question_id) => {
     return await sql `SELECT * FROM question_answer_options WHERE question_id = ${question_id}`;

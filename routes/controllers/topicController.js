@@ -1,7 +1,6 @@
 import * as topicService from "../../services/topicService.js";
 import { validasaur } from "../../deps.js";
 import * as questionsService from "../../services/questionsService.js";
-//import * as answersService from "../../services/answersService.js";
 
 const listTopics = async ({ render,state }) => {
 
@@ -42,7 +41,7 @@ const addTopic = async ({ request, response, render, state }) => {
 
   if(user.admin){
     if (!passes) {
-      //doesnt print the errors but shows the error in console
+  
       console.log(errors);
       data.validationErrors = errors;
       data.topics = await topicService.listTopics()

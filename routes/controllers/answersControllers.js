@@ -14,7 +14,6 @@ const getQuestion = async ({ render,params}) => {
 };
 
 
-
 const validationRules = {
   text: [validasaur.required, validasaur.minLength(1)],
 };
@@ -47,14 +46,14 @@ const addAnswer = async ({ request, response, render, state, params}) => {
  /// multiple questions can be added to the topic
   if(auth){
     if (!passes) {
-      //doesnt print the errors but shows the error in console
+     
       console.log(errors);
       data.validationErrors = errors;
       data.topic = await topicService.findTopic(params.id);
       data.question = await questionsService.findQuestion(params.qId);
       data.answers = await answersService.listAnswers(params.qId);
-      ///shoudlnt use render again just redirect 
-      //need to create external data storage 
+  
+
       
       render("question.eta", data);
 
@@ -65,13 +64,12 @@ const addAnswer = async ({ request, response, render, state, params}) => {
     }
   }
   
-    ////topics/:tId/questions/:qId
+  
     
 };
 
 const deleteAnswer = async ({ params, response, state}) => {
 
-  //delete id is in the url link
 
   const auth = await state.session.get("authenticated")
   if(auth){

@@ -1,8 +1,3 @@
-// GET requests made to the path /api/questions/random return a randomly selected 
-// question as an JSON document. The document has attributes questionId, questionText, 
-// and answerOptions. The attribute answerOptions is a list that contains answer options. 
-// Each answer option has attributes optionId and optionText. As an example, a document 
-// received as a response could look as follows:
 import * as questionsService from "../../services/questionsService.js";
 import * as answerService from "../../services/answersService.js"
 
