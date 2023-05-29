@@ -22,11 +22,10 @@
 <% if (it.topics && it.topics.length > 0) { %>
 <ul class="topics">
 <% it.topics.forEach((topic) => { %>
-    <li><a href="/topics/<%= topic.id %>"><%= topic.name %></a>
-     <form method="POST" action="/topics/<%= topic.id %>/delete"></br>
+    <li><a href="/topics/<%= topic.id %>"><%= topic.name %></a></li>
+    <form method="POST" action="/topics/<%= topic.id %>/delete"></br>
      <input type="submit" value="Delete topic." />
-     
-    </li>
+     </form>
 <% }); %>
 </ul>
 <%}else { %>

@@ -60,38 +60,50 @@ const postLoginForm = async ({ request, response, state }) => {
   const email = params.get("email");
   const password = params.get("password");
 
-  const existingUsers = await userService.findUsersWithEmail(email);
 
-  if (existingUsers.length === 0) {
-    response.status = 401;
-    return;
+  if(!email|| !password){
+    data.error = "Enter both email and password."
+    response.redirect("/auth/login");
+  }else{
+
+    const existingUsers = await userService.findUsersWithEmail(email);
+    
+
+    if (existingUsers.length === 0) {
+      data.error = "Incorrect email"
+      response.redirect("/auth/login");
+    }else{
+      const userObj = existingUsers[0];
+      const hash = userObj.password;
+      const passwordCorrect = await bcrypt.compare(password, hash);
+      if(!passwordCorrect){
+        data.error = "Incorrect password"
+        response.redirect("/auth/login");
+      }else{
+        data.error = ""
+
+        await state.session.set("authenticated", true);
+    
+        await state.session.set("user", {
+          id: userObj.id,
+          email: userObj.email,
+          admin: userObj.admin
+        });
+    
+        response.redirect("/topics");
+
+      }
+    } 
   }
-
-  // take the first row from the results
-  const userObj = existingUsers[0];
-
-  const hash = userObj.password;
-
-  const passwordCorrect = await bcrypt.compare(password, hash);
   
-  if (!passwordCorrect) {
-    response.status = 401;
-    return;
-  }
+};
 
-  await state.session.set("authenticated", true);
-
-  await state.session.set("user", {
-    id: userObj.id,
-    email: userObj.email,
-    admin: userObj.admin
-  });
-
-  response.redirect("/topics");
+const data = {
+  error: "",
 };
 
 const showLoginForm = ({ render }) => {
-  render("login.eta");
+  render("login.eta",data);
 };
 
 export {

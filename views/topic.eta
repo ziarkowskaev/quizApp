@@ -24,6 +24,7 @@
 
      <form method="POST" action="/topics/<%= question.topic_id %>/questions/<%= question.id %>/delete">
      <input type="submit" value="Delete Question" />
+     </form>
     </li>
 <% }); %>
 </ul>
