@@ -17,11 +17,6 @@ https://quizapp-qque.onrender.com/
 
 Application has in total 10 tests, from which 6 were created with superOak and 4 using Playwright.
 
-Command for running superOak tests.
-docker-compose run --rm  drill-and-practice deno test --allow-all ./tests/quizTests.js
+Respitory used for deployment, to see all the files(including database structure) use respitory /quiz-app-all-file.
 
-Command for running Playwright tests.
-docker-compose run --entrypoint=npx e2e-playwright playwright test
-
-'
 
